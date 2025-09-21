@@ -4,7 +4,7 @@ with open("README.md", "r", encoding="utf8") as fh:
     long_description = fh.read()
 
 setup(
-    name='rushcli',
+    name='rushclis',
     version='0.1.0',
     packages=find_packages(),
     requires=[

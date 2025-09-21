@@ -1,6 +1,6 @@
 ﻿from argparse import ArgumentParser, HelpFormatter
 
-from rushcli.color import print_red
+from rushclis.color import print_red
 
 
 class Command(ArgumentParser):
