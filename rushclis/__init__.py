@@ -8,7 +8,7 @@ from colorama import Style, Fore
 from rushlib.args import parse_args
 from rushlib.func import smart_call
 
-from rushclis.color import print_red
+from rushlib.output import print_red
 from rushclis.command import Command
 from rushclis.help import cmd_help
 

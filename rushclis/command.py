@@ -1,27 +1,12 @@
-﻿from argparse import ArgumentParser, HelpFormatter
+﻿from argparse import ArgumentParser
 
-from rushclis.color import print_red
+from rushlib.output import print_red
 
 
 class Command(ArgumentParser):
     def __init__(self,
-                 prog=None,
-                 usage=None,
-                 description=None,
-                 epilog=None,
-                 parents=[],
-                 formatter_class=HelpFormatter,
-                 prefix_chars='-',
-                 fromfile_prefix_chars=None,
-                 argument_default=None,
-                 conflict_handler='error',
-                 add_help=True,
-                 allow_abbrev=True,
-                 exit_on_error=True,
-                 print_error=False):
-        super().__init__(prog, usage, description, epilog, parents, formatter_class, prefix_chars,
-                         fromfile_prefix_chars, argument_default, conflict_handler, add_help, allow_abbrev,
-                         exit_on_error)
+                 print_error=False, *args, **kwargs):
+        super().__init__(*args, **kwargs)
         self.print_error = print_error
 
     def error(self, message):
